@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Онлайн Голосування</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #f0f2f5;
+        color: #333;
+        margin: 0;
+      }
+      .container {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 90%;
+        max-width: 500px;
+      }
+      h1 {
+        color: #2c3e50;
+        margin-bottom: 30px;
+        font-size: 2em;
+      }
+      .options button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 25px;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.1em;
+        transition: background-color 0.3s ease;
+        width: calc(33% - 20px);
+        min-width: 120px;
+      }
+      .options button:hover {
+        background-color: #45a049;
+      }
+      .results {
+        margin-top: 30px;
+        border-top: 1px solid #eee;
+        padding-top: 20px;
+        text-align: left;
+      }
+      .result-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+        font-size: 1.2em;
+        padding: 10px;
+        background-color: #e9ecef;
+        border-radius: 5px;
+      }
+      .result-item span:first-child {
+        font-weight: bold;
+        color: #555;
+      }
+      .result-item span:last-child {
+        background-color: #007bff;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        min-width: 30px;
+        text-align: center;
+      }
+      @media (max-width: 600px) {
+        .options button {
+          width: calc(50% - 20px);
+        }
+      }
+      @media (max-width: 400px) {
+        .options button {
+          width: calc(100% - 20px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>За що сьогодні обідати?</h1>
+      <div class="options">
+        <button id="pizza-btn">Піца</button>
+        <button id="burger-btn">Бургер</button>
+        <button id="salad-btn">Салат</button>
+      </div>
+      <div class="results">
+        <h2>Результати:</h2>
+        <div id="results-display">
+          </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
